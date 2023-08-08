@@ -74,3 +74,6 @@ const database = {
 }
 
 
+export const getGuests = () => {
+    return database.guests.map(guest => ({...guest}))
+}
