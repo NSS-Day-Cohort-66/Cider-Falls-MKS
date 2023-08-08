@@ -1,23 +1,19 @@
-// make sure to import modules 
+// make sure to import modules
+import { parkList } from "./parkarea.js";
 
 import { guestList } from "./guests.js";
 
 import { serviceHeader } from "./services.js";
 
-const mainContainer = document.querySelector("#container")
+const mainContainer = document.querySelector("#container");
 
-const applicationHTML = 
-`<h1>Cider Falls!</h1>
+const applicationHTML = `<h1>Cider Falls!</h1>
 ${serviceHeader()}
 
 <article class="parkareaservice_flex">
             <section class="details_parkarea">
                 <h2>Park Areas</h2>
-
-            </section>
-            <section class="details_services">
-                <h2>Services</h2>
-
+                ${parkList()}
             </section>
 
 <article class="aside"
@@ -29,9 +25,4 @@ ${serviceHeader()}
 </article>
 `;
 
-
-
-
-
-
-mainContainer.innerHTML = applicationHTML
+mainContainer.innerHTML = applicationHTML;
