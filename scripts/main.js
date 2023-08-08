@@ -2,10 +2,13 @@
 
 import { guestList } from "./guests.js";
 
+import { serviceHeader } from "./services.js";
+
 const mainContainer = document.querySelector("#container")
 
 const applicationHTML = 
 `<h1>Cider Falls!</h1>
+${serviceHeader()}
 
 <article class="parkareaservice_flex">
             <section class="details_parkarea">

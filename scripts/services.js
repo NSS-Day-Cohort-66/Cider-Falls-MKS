@@ -5,10 +5,11 @@ const services = getServices()
 // responisble for iterating thru each service available in each park 
 
 export const serviceHeader = () => {
-    let headerHTML = ``
+    let headerHTML = `Park Services: `
     for (const service of services) {
-        headerHTML += 
-    }
+        headerHTML += `${service.name}, `
+        
+    }return headerHTML.slice(0, -2)
 }
 
 
