@@ -44,40 +44,5 @@ html to main or window alert/click event
 - What is the specific algorithm for each function? Does the function need parameters? Should it return something?
 
 
-const database = [
-    guests : {
-        id: 1
-        name: Michelle
-        id: 2
-        name: Spencer
-        id: 3
-        name: Kevin
-        id: 4
-        name: Nicholas
-        id: 5
-        name: Val
-    },
-    parkArea : {
-        id: 1
-        name: "Chamfort River"
-        
-        guestId: 
-    },
-    services : {
-        id: 1
-        name: Rafting
-        id: 2
-        name: Canoeing
-        id: 3
-        name: Picknicking
-    }
-    parkAreaServices: 
-    id: 
-    parkAreaId:
-    serviceId: 
 
 
-
-
-
-]
