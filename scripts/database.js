@@ -75,5 +75,7 @@ const database = {
 
 
 export const getServices = () => {
-    return database.services.map(service => ({...service}))
+    return database.services.map(service => ({...service}))}
+export const getGuests = () => {
+    return database.guests.map(guest => ({...guest}))
 }
