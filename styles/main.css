@@ -1,0 +1,26 @@
+h1 {
+ text-align: center;   
+}
+
+h2 {
+
+}
+
+.header {
+    text-align: center;
+}
+
+.parkareaservice_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.details_parkarea {
+    display: grid;
+    grid-template-columns: 33% 33% 33% ;
+    grid-template-rows: 50% 50%;
+    width: 80%;
+
+}
+

@@ -8,11 +8,12 @@ import { serviceHeader } from "./services.js";
 const mainContainer = document.querySelector("#container");
 
 const applicationHTML = `<h1>Cider Falls!</h1>
-${serviceHeader()}
+<div class="header">${serviceHeader()}</div>
 
+
+<h2>Park Areas</h2>
 <article class="parkareaservice_flex">
             <section class="details_parkarea">
-                <h2>Park Areas</h2>
                 ${parkList()}
             </section>
 
