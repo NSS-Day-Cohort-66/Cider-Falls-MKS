@@ -1,22 +1,37 @@
 import { getServices } from "./database.js";
-const services = getServices()
+const services = getServices();
 
+import { getParks } from "./database.js";
 
-// responisble for iterating thru each service available in each park 
+import { getParkAreas } from "./database.js";
+import { getParkServices } from "./database.js";
+
+// responisble for iterating thru each service available in each park
 
 export const serviceHeader = () => {
-    let headerHTML = `Park Services: `
-    for (const service of services) {
-        headerHTML += `${service.name}, `
-        
-    }return headerHTML.slice(0, -2)
-}
+  let headerHTML = `Park Services: `;
+  for (const service of services) {
+    headerHTML += `<data-type="service" data-id="${service.id}">${service.name}, `;
+  }
+  return headerHTML.slice(0, -2);
+};
 
 
-
-
-// pulling from parkareaservice in the database 
-
-
-
-// separate function to iterate thru which park has which service. make a click event 
+document.addEventListener("click", (clickEvent) => {
+    const serviceClicked = clickEvent.target;
+    const serviceId = parseInt(serviceClicked.dataset.id);
+    const parks = getParkAreas(); 
+    const matchingParkNames = []; 
+    for (const parkArea of parks) {
+      const parkServices = getParkServices(parkArea.id); 
+      for (const parkService of parkServices) {
+        if (parkService.id === serviceId) {
+          matchingParkNames.push(parkArea.name); 
+          break; 
+        }
+      }
+    }
+    if (matchingParkNames.length > 0) {
+      window.alert(`Hello ${matchingParkNames.join(", ")}`);
+    }
+  });

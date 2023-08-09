@@ -95,3 +95,7 @@ export const getServices = () => {
 export const getGuests = () => {
   return database.guests.map((guest) => ({ ...guest }));
 };
+
+export const getParks = () => {
+  return database.parkAreaService.map((service) => ({ ...service}))
+}
