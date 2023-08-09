@@ -20,7 +20,7 @@ export const parkList = () => {
       .map((service) => `<li>${service.name}</li>`)
       .join("");
     //!The map function is then used on the parkServices array to create an array of HTML list items (<li>) for each service name. The resulting array is then joined into a single string using the join method.
-    parkHTML += `<section>
+    parkHTML += `<section class="parkarea_individual_box">
       <div data-type="${park.id}" data-name="parkareatitle" data-parkname="${park.name}">${park.name}</div>
       <ul>${servicesHTML}</ul>
     </section>`;
