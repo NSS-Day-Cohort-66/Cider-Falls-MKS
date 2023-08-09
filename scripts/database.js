@@ -80,10 +80,12 @@ export const getParkAreas = () => {
 export const getParkServices = (parkId) => {
   const parkServices = database.parkAreaService.filter(
     (parkService) => parkService.parkAreaId === parkId
+    //!Lines 81 and 82 filter the database.parkAreaService array to find all parkService objects that have a parkAreaId equal to the parkId parameter.
   );
   return parkServices.map((parkService) => {
     return database.services.find(
       (service) => service.id === parkService.serviceId
+      //!then uses the map function to iterate over the filtered parkServices array and returns an array of service objects from the database.services array that have an id equal to the serviceId of each parkService object.
     );
   });
 };
