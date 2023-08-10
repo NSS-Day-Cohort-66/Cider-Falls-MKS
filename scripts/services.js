@@ -32,6 +32,6 @@ document.addEventListener("click", (clickEvent) => {
       }
     }
     if (matchingParkNames.length > 0) {
-      window.alert(`Hello ${matchingParkNames.join(", ")}`);
+      window.alert(`Available in the following park areas: ${matchingParkNames.join(", ")}🏕️`);
     }
   });
