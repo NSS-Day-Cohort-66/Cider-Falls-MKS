@@ -7,23 +7,30 @@ import { serviceHeader } from "./services.js";
 
 const mainContainer = document.querySelector("#container");
 
-const applicationHTML = `<h1>Cider Falls!</h1>
+const applicationHTML = `
+<div class="img_header">
+<img class="img_logo" src="CiderFalls.png" alt="Cider Falls">
+</div>
 <div class="header">${serviceHeader()}</div>
-
-
-<h2>Park Areas</h2>
 <article class="parkareaservice_flex">
+<div><h2>Park Area:</h2></div>
             <section class="details_parkarea">
                 ${parkList()}
             </section>
 
-<article class="aside"
+<article class="aside">
             <section class="details_guest">
                  <h2>Current Guests</h2>
                 ${guestList()}
             </section>
             </article>
-</article>
+
+            </article>
+            <section>
+            <div class="footer">
+            123-456-7890 - ciderfalls@gmail.com - 1234 Cider Falls Road
+            </div>
+            </section>
 `;
 
 mainContainer.innerHTML = applicationHTML;
